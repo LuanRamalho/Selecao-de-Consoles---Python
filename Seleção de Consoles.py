@@ -22,7 +22,9 @@ consoles = {
         "Playstation 2": "https://s2-techtudo.glbimg.com/4y3nejQcBv7GeSvfrGsLIP3MIp8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/q/E/zZjJhTRlqeGY8aX3sg7w/playstation-2-ps2-20-anos-fatos-curiosos-console-sony.jpg",
         "Playstation 3": "https://s2-techtudo.glbimg.com/E1ugszzmAoxVsXMwoOyT9qg-794=/0x0:695x575/984x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2017/02/07/9252394sz2.jpg",
         "Playstation 4": "https://cdn.awsli.com.br/800x800/118/118222/produto/16619909/e975ecf5dc.jpg",
-        "Playstation 5": "https://m.media-amazon.com/images/I/41UWxQoHMPL.jpg"
+        "Playstation 5": "https://m.media-amazon.com/images/I/41UWxQoHMPL.jpg",
+        "Playstation Vita": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSxCvT9Y9vv0b8kJTx73RYcBXnbJGNlRj7XkZ_90SIuYvelii5dUPokaNB-hGEuBMyKvRUT9fPT-M5FH9ixgtm5RJ0OESSp75vGyAHQoXFQtHHxzUzCk5qPEBDW3DEoKrOvJG9OduktC6pjjAw97B8hUuJuSlvuUUbEqiaxk_s7JKvl8UWwRs_AHDSKg/s1280/ps-vita-games.jpg",
+        "Playstation Portátil": "https://ogimg.infoglobo.com.br/in/2831848-c6d-b2c/FT1086A/Credito-Divulgacao.jpg"
     },
     "Microsoft": {
         "Xbox": "https://http2.mlstatic.com/D_827727-MLB80143857277_102024-C.jpg",
@@ -76,7 +78,7 @@ def show_console_image():
             response.raise_for_status()
             img_data = BytesIO(response.content)
             img = Image.open(img_data)
-            img = img.resize((400, 400), Image.LANCZOS)  # Usando LANCZOS no lugar de ANTIALIAS
+            img = img.resize((600, 600), Image.LANCZOS)  # Usando LANCZOS no lugar de ANTIALIAS
             photo = ImageTk.PhotoImage(img)
             image_label.config(image=photo)
             image_label.image = photo
